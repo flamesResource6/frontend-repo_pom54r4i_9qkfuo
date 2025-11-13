@@ -1,9 +1,10 @@
 import React from 'react'
 import HeroSection from './components/HeroSection'
+import Layout from './components/Layout'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <Layout>
       <HeroSection />
       <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-2xl font-bold text-slate-900">What we’re building here</h2>
@@ -29,7 +30,7 @@ function App() {
           </div>
         </div>
       </section>
-    </div>
+    </Layout>
   )
 }
 
