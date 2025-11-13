@@ -1,26 +1,34 @@
-import { useState } from 'react'
+import React from 'react'
+import HeroSection from './components/HeroSection'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
+    <div className="min-h-screen bg-white">
+      <HeroSection />
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <h2 className="text-2xl font-bold text-slate-900">What we’re building here</h2>
+        <p className="mt-2 text-slate-600">
+          A modular revamp of Industrial Automation & Solutions using modern UI patterns. This preview showcases the animated hero with a full-width 3D cover.
         </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 className="font-semibold text-slate-900">Next steps</h3>
+            <ul className="mt-3 list-disc pl-5 text-sm text-slate-600">
+              <li>Add shadcn/ui navigation and layout shell</li>
+              <li>Implement blog data model and APIs</li>
+              <li>Wire authentication and role-based access</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 className="font-semibold text-slate-900">Tech highlights</h3>
+            <ul className="mt-3 list-disc pl-5 text-sm text-slate-600">
+              <li>Framer Motion animations</li>
+              <li>Spline 3D background with safe overlays</li>
+              <li>Tailwind-first responsive design</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }
